@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/assets/statistics.js":
-/*!**********************************!*\
-  !*** ./src/assets/statistics.js ***!
-  \**********************************/
+/***/ "./statistics.js":
+/*!***********************!*\
+  !*** ./statistics.js ***!
+  \***********************/
 /***/ (() => {
 
-eval("function createStatistics() {\r\n  let counter = 0;\r\nlet isDestroyed = false;\r\n\r\n  const listener = () => ++counter;\r\n  document.addEventListener('click', listener);\r\n  return {\r\n    destroy() {\r\n      document.removeEventListener('click', listener);\r\n      isDestroyed = true;\r\n      return 'Destroyed succsessfully'\r\n    },\r\n\r\n    getClicks() {\r\n      if (isDestroyed) return 'Statistics was destroyed'\r\n      return counter\r\n    }\r\n  }\r\n}\r\n\r\nwindow.statistics = createStatistics();\n\n//# sourceURL=webpack://webpack-training/./src/assets/statistics.js?");
+eval("function createStatistics() {\r\n  let counter = 0;\r\nlet isDestroyed = false;\r\n\r\n  const listener = () => ++counter;\r\n  document.addEventListener('click', listener);\r\n  return {\r\n    destroy() {\r\n      document.removeEventListener('click', listener);\r\n      isDestroyed = true;\r\n      return 'Destroyed succsessfully'\r\n    },\r\n\r\n    getClicks() {\r\n      if (isDestroyed) return 'Statistics was destroyed'\r\n      return counter\r\n    }\r\n  }\r\n}\r\n\r\nwindow.statistics = createStatistics();\n\n//# sourceURL=webpack:///./statistics.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("function createStatistics() {\r\n  let counter = 0;\r\nlet isDestroyed = f
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/assets/statistics.js"]();
+/******/ 	__webpack_modules__["./statistics.js"]();
 /******/ 	
 /******/ })()
 ;

@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  context: path.resolve(__dirname, 'src/assets'),
   mode: 'development',
   entry: {
-    main: './src/assets/index.js',
-    stat: './src/assets/statistics.js'
+    main: './index.js',
+    stat: './statistics.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,8 +15,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/assets/index.html'
+      template: './index.html'
     }),
     new CleanWebpackPlugin()
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg|webp|gif|svg)$/,
+        type: 'asset/resource'
+      }
+    ]
+  }
 };
