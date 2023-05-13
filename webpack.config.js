@@ -27,7 +27,22 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|webp|gif|svg)$/,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[hash][ext]'
+        }
+      },
+      {
+        test: /\.(woff|woff2|ttf|eot)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name].[hash][ext]'
+        }
+      },
+      {
+        test: /\.xml$/,
+        use: ['xml-loader']
+        }
       }
     ]
   }

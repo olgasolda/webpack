@@ -1,3 +1,9 @@
+@import "fonts.css";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -6,5 +12,13 @@ h1 {
 .container {
   padding: 20px 40px;
   min-width: 1280px;
+  margin: auto;
+}
+
+.logo {
+  background-image: url(../webpack.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
   margin: auto;
 }
