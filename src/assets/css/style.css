@@ -1,5 +1,4 @@
-@import "fonts.css";
-
+@import "~normalize.css";
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -21,4 +20,8 @@ h1 {
   width: 300px;
   height: 300px;
   margin: auto;
+}
+
+.code {
+  color: darkred;
 }
